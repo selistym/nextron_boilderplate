@@ -1,0 +1,127 @@
+.list .ag-cell:not(.col-last-ghost) {
+  background-color: white;
+}
+
+/* Header height is configured in config */
+.list .ag-header {
+  background-color: #ebeae9;
+  height: 1px !important;
+  min-height: 1px !important;
+}
+/* This not last child is for frozen columns. It is overriding the pinned-lef-header. Not really working */
+/* .ag-header-cell:not(:last-child) { */
+.list .ag-cell {
+  align-items: center;
+  border-bottom: 1px solid #ebeae9;
+  display: flex;
+  color: #616177;
+  font-size: 14px;
+  outline: none;
+}
+.list .no-border {
+  border: none;
+}
+/* left index column */
+.list .col-index-ghost {
+  border: none;
+}
+.list .no-focus {
+  outline: none;
+}
+.list .col-index-ghost {
+  border-right: none;
+}
+.list .ag-row-group .ag-cell {
+  overflow: unset;
+}
+
+/* All custom cell renderers should put all the components to show during "focus" in here */
+.list .ag-react-container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* Focus & selected row states and checkbox & row drag */
+.list .ag-cell-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.list .ag-row-selected .ag-cell:not(.col-last-ghost) {
+  background-color: #f0f7ff;
+}
+.list .ag-row-dragging .ag-cell:not(.col-last-ghost) {
+  opacity: 0.6;
+}
+.list .ag-selection-checkbox,
+.list .ag-row-drag {
+  align-items: center;
+  bottom: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.list .ag-selection-checkbox {
+  left: 15px;
+}
+.list .ag-row-drag {
+  left: 4px;
+}
+.list .ag-icon-row-drag {
+  height: 12px;
+  width: 8px;
+  background-image: url(/static/icons/RowDrag.svg);
+}
+.list .ag-icon-row-drag {
+  cursor: pointer;
+}
+.list .row-index-expand {
+  display: none;
+}
+
+.list .ag-row-selected .ag-selection-checkbox,
+.list .ag-row-hover .ag-row-drag,
+.list .ag-row-hover .ag-selection-checkbox {
+  display: flex;
+}
+.list .ag-row-selected .row-index-value,
+.list .ag-row-hover .row-index-value {
+  visibility: hidden;
+}
+
+/* Footer & Group: Turn off border and highlight stying for footers & group headers */
+.list .ag-row-group .ag-cell,
+.list .ag-row-footer .ag-cell {
+  border: none;
+  outline: none;
+}
+.list .ag-row-footer .footer-custom {
+  background-color: #ffffff;
+}
+.list .ag-row-hover.ag-row-footer .footer-custom {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.list .ag-row-hover .ag-cell {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+/* add button at the bottom */
+.list .ag-floating-bottom-full-width-container {
+  border-top: 1px solid #ebeae9;
+}
+.list .ag-floating-bottom-full-width-container .ag-row-hover {
+  background-color: #ebeffd;
+  cursor: pointer;
+}
+
+/* Styles for List, doing some dangerous dirty stuff */
+.list .ag-center-cols-container {
+  width: 100% !important;
+}
+.list .col-list-body {
+  width: calc(100% - 60px) !important;
+}

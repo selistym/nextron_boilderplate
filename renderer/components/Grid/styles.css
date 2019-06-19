@@ -1,0 +1,228 @@
+.grid .ag-layout-normal {
+  background-color: #e8e9e8;
+}
+.grid .ag-cell:not(.col-last-ghost) {
+  background-color: white;
+}
+
+/* Header height is configured in config */
+.grid .ag-header {
+  background-color: #f6f4f1;
+  border-top: 1px solid #ebeae9;
+  border-bottom: 1px solid #ebeae9;
+  height: 40px;
+}
+/* This not last child is for frozen columns. It is overriding the pinned-lef-header. Not really working */
+/* .ag-header-cell:not(:last-child) { */
+.grid .ag-header-cell {
+  border-right: 1px solid #ebeae9;
+}
+.grid .ag-cell {
+  align-items: center;
+  border-right: 1px solid #ebeae9;
+  border-bottom: 1px solid #ebeae9;
+  display: flex;
+  color: #616177;
+  font-size: 14px;
+  outline: none;
+}
+.grid .no-border {
+  border: none;
+}
+/* ghost column is the right hand add field 'column' */
+.grid [col-id='ghost-column'].ag-header-cell {
+  padding: 0px;
+}
+.grid [col-id='ghost-column'].ag-cell {
+  border: none;
+  pointer-events: none;
+}
+/* left index column */
+.grid .col-index-ghost {
+  border: none;
+}
+
+.grid .ag-pinned-left-header {
+  border-right: 1px solid #b0b0bb;
+}
+.grid .ag-cell-last-left-pinned {
+  border-right: 1px solid #b0b0bb;
+}
+
+.grid .ag-pinned-left-cols-container .ag-row-focus {
+  z-index: 3;
+}
+.grid .ag-row-focus {
+  z-index: 1;
+}
+.grid .ag-row:not(.ag-row-group):not(.ag-row-footer) .ag-cell-focus:not(.no-focus) {
+  background-color: white;
+  border: 2px solid #3f66f3;
+  border-radius: 2px;
+  box-sizing: content-box;
+  outline: initial;
+  transform: translate(-3px, -3px);
+  z-index: 2;
+}
+.grid .no-focus {
+  outline: none;
+}
+.grid .col-index-ghost {
+  border-right: none;
+}
+.grid .ag-row-group .ag-cell {
+  overflow: unset;
+}
+/* All custom cell renderers should put all the components to show during "focus" in here */
+.grid .ag-cell-focus #cell-focus-container {
+  display: block;
+}
+.grid #cell-focus-container {
+  display: none;
+}
+.grid .ag-react-container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* Focus & selected row states and checkbox & row drag */
+.grid .ag-cell-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.grid .ag-row-focus .ag-cell:not(.col-last-ghost) {
+  background-color: #f8f8f8;
+}
+.grid .ag-row-selected .ag-cell:not(.col-last-ghost) {
+  background-color: #f0f7ff;
+}
+.grid .ag-row-dragging .ag-cell:not(.col-last-ghost) {
+  opacity: 0.6;
+}
+.grid .ag-selection-checkbox,
+.grid .ag-row-drag {
+  align-items: center;
+  bottom: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.grid .ag-selection-checkbox {
+  left: 15px;
+}
+.grid .ag-row-drag {
+  left: 4px;
+}
+.grid .ag-icon-row-drag {
+  height: 12px;
+  width: 8px;
+  background-image: url(/static/icons/RowDrag.svg);
+}
+.grid .ag-icon-row-drag {
+  cursor: pointer;
+}
+.grid .row-index-expand {
+  display: none;
+}
+
+.grid .ag-row-selected .ag-selection-checkbox,
+.grid .ag-row-hover .ag-row-drag,
+.grid .ag-row-hover .ag-selection-checkbox,
+.grid .ag-row-hover .row-index-expand {
+  display: flex;
+}
+.grid .ag-row-selected .row-index-value,
+.grid .ag-row-hover .row-index-value {
+  visibility: hidden;
+}
+
+/* Footer & Group: Turn off border and highlight stying for footers & group headers */
+.grid .ag-row-group .ag-cell,
+.grid .ag-row-footer .ag-cell {
+  border: none;
+  outline: none;
+}
+.grid .ag-row-footer .footer-custom {
+  background-color: #ffffff;
+}
+.grid .ag-row-hover.ag-row-footer .footer-custom {
+  background-color: #ebeffd;
+  cursor: pointer;
+}
+
+/* add button at the bottom */
+.grid .ag-floating-bottom-full-width-container {
+  background-color: white;
+  border-top: 1px solid #ebeae9;
+}
+.grid .ag-floating-bottom-full-width-container .ag-row-hover {
+  background-color: #ebeffd;
+  cursor: pointer;
+}
+
+/* Second last column (in the UI it is the last column) is special because it needs a border radius and border */
+.grid .ag-row-group-contracted > .ag-cell.col-last .group-header-custom {
+  border-bottom-right-radius: 5px;
+}
+.grid .ag-row:not(.ag-row-group) > .ag-cell.col-last {
+  border-right: 1px solid #b0b0bb;
+}
+.grid .ag-row-footer > .ag-cell.col-last .footer-custom {
+  border-bottom-right-radius: 5px;
+  border-right: 1px solid #b0b0bb;
+}
+
+/* timeline styles */
+.grid .cell-timeline {
+  border-bottom: none;
+  border-right: none;
+}
+
+/* timeline styles */
+.grid .header-timeline {
+  align-items: center;
+  border-bottom: 1px solid #ebeae9;
+  border-right: 1px solid #ebeae9;
+  display: flex;
+  justify-content: center;
+
+  color: #393955;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: uppercase;
+}
+.grid .header-group-timeline {
+  font-family: 'Galano Grotesque Medium';
+}
+
+/* context menu style */
+.grid .ag-menu {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #d8d6d4;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.grid .ag-menu-option {
+  align-items: center;
+  display: flex;
+  padding: 8px;
+}
+
+.grid .ag-menu-option:hover {
+  background-color: #ebeffd;
+}
+
+.grid .ag-menu-option-icon {
+  margin-right: 8px;
+  color: #616177;
+}
+
+.grid .ag-menu-option-text {
+  color: #616177;
+  font-size: 14px;
+}

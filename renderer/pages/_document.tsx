@@ -1,20 +1,40 @@
-import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/styles';
-import flush from 'styled-jsx/server';
-import theme from '../components/theme';
+import React from 'react';
+import { ServerStyleSheet } from 'styled-components';
 
-class MyDocument extends Document {
-  render() {
+export default class MyDocument extends Document<{ styleTags: any }> {
+  public static async getInitialProps(ctx: any) {
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App: any) => (props: any) => sheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
+  }
+
+  public render() {
     return (
-      <html lang="en" dir="ltr">
+      <html lang="en">
         <Head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
-          <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         </Head>
-        <body>
+        <body id="root">
           <Main />
           <NextScript />
         </body>
@@ -22,27 +42,3 @@ class MyDocument extends Document {
     );
   }
 }
-
-MyDocument.getInitialProps = async ctx => {
-  const sheets = new ServerStyleSheets();
-  const originalRenderPage = ctx.renderPage;
-
-  ctx.renderPage = () =>
-    originalRenderPage({
-      enhanceApp: App => props => sheets.collect(<App {...props} />),
-    });
-
-  const initialProps = await Document.getInitialProps(ctx);
-
-  return {
-    ...initialProps,
-    styles: (
-      <React.Fragment>
-        {sheets.getStyleElement()}
-        {flush() || null}
-      </React.Fragment>
-    ),
-  };
-};
-
-export default MyDocument;
