@@ -1,6 +1,6 @@
 import Moment, { Moment as IMoment } from 'moment';
 
-import { COLUMN_GROUP_LIMIT, DEFAULT_WIDTH, LEEWAY, TIME_CONFIG } from '@app/constants/timeline';
+import { COLUMN_GROUP_LIMIT, DEFAULT_WIDTH, LEEWAY, TIME_CONFIG } from '@app/renderer/constants/timeline';
 
 // Put this in shared file afterwards
 interface IRow {

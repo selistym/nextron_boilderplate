@@ -1,16 +1,16 @@
-import apollo from '@app/utils/api';
+import apollo from '@app/renderer/utils/api';
 
-import { GET_CELL_WITH_DEPTH_QUERY } from '@app/graphql/core/getCellWithDepth.query';
-import { GET_CORE_QUERY } from '@app/graphql/core/getCore.query';
-import { GET_VIEWS_QUERY } from '@app/graphql/core/getViews.query';
-import { ADD_COLUMN_MUTATION } from '@app/graphql/table/addColumn.mutation';
-import { ADD_ROW_MUTATION } from '@app/graphql/table/addRow.mutation';
-import { ADD_TABLE_MUTATION } from '@app/graphql/table/addTable.mutation';
-import { ADD_VIEW_MUTATION } from '@app/graphql/table/addView.mutation';
-import { UPDATE_CELL_MUTATION } from '@app/graphql/table/updateCell.mutation';
+import { GET_CELL_WITH_DEPTH_QUERY } from '@app/renderer/graphql/core/getCellWithDepth.query';
+import { GET_CORE_QUERY } from '@app/renderer/graphql/core/getCore.query';
+import { GET_VIEWS_QUERY } from '@app/renderer/graphql/core/getViews.query';
+import { ADD_COLUMN_MUTATION } from '@app/renderer/graphql/table/addColumn.mutation';
+import { ADD_ROW_MUTATION } from '@app/renderer/graphql/table/addRow.mutation';
+import { ADD_TABLE_MUTATION } from '@app/renderer/graphql/table/addTable.mutation';
+import { ADD_VIEW_MUTATION } from '@app/renderer/graphql/table/addView.mutation';
+import { UPDATE_CELL_MUTATION } from '@app/renderer/graphql/table/updateCell.mutation';
 
-import { GetCoreQuery, GetCoreQuery_workspace } from '@app/graphql/core/types/GetCoreQuery';
-import { GetViewsQuery } from '@app/graphql/core/types/GetViewsQuery';
+import { GetCoreQuery, GetCoreQuery_workspace } from '@app/renderer/graphql/core/types/GetCoreQuery';
+import { GetViewsQuery } from '@app/renderer/graphql/core/types/GetViewsQuery';
 
 import {
   AddColumnInput,
@@ -19,7 +19,7 @@ import {
   AddViewInput,
   UpdateCellInput,
   WorkspaceIdInput,
-} from '@app/types/graphql-global-types';
+} from '@app/renderer/types/graphql-global-types';
 
 export const getCore = async (
   workspaceIdInput: WorkspaceIdInput,

@@ -2,8 +2,8 @@ import Router from 'next/router';
 
 import { getByIdAndAllIds } from '../../shared/helper';
 
-import { FIELD_TYPES } from '@app/constants/fieldTypes';
-import { ValueSource } from '@app/constants/grid';
+import { FIELD_TYPES } from '@app/renderer/constants/fieldTypes';
+import { ValueSource } from '@app/renderer/constants/grid';
 import { ICellContent } from '../types';
 import { adaptColumn, addGhostColumn, addIndexColumn, pinFirstColumn } from './grid';
 import { adaptListRow, configureListColumns } from './list';
@@ -11,15 +11,15 @@ import { getFlattenedLookupValue } from './lookup';
 import { adaptRecord } from './record';
 import { configureTimeColumns, transformRowDataAndGetTimelineMeta } from './timeline';
 
-import { TIME_OPTIONS } from '@app/constants/timeline';
+import { TIME_OPTIONS } from '@app/renderer/constants/timeline';
 
 import {
   GetCoreQuery,
   GetCoreQuery_workspace_cores_tableOptions,
   GetCoreQuery_workspace_cores_tables_views,
   GetCoreQuery_workspace_cores_tables_views_rows,
-} from '@app/graphql/core/types/GetCoreQuery';
-import { arrayToObject } from '@app/utils';
+} from '@app/renderer/graphql/core/types/GetCoreQuery';
+import { arrayToObject } from '@app/renderer/utils';
 
 export const adaptCoreAndTableViewOptions = ({ workspace: { cores } }: GetCoreQuery) => {
   // tslint:disable-next-line: no-console

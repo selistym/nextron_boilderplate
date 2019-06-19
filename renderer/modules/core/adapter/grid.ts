@@ -1,6 +1,6 @@
-import { TYPE_RENDERER } from '@app/constants/grid';
+import { TYPE_RENDERER } from '@app/renderer/constants/grid';
 
-import { GetCoreAndViewQuery_workspace_cores_tables_views_columns } from '@app/graphql/core/types/GetCoreAndViewQuery';
+import { GetCoreAndViewQuery_workspace_cores_tables_views_columns } from '@app/renderer/graphql/core/types/GetCoreAndViewQuery';
 
 /**
  * Also includes some timeline code. We are adding pinned, and hidden to the columns.

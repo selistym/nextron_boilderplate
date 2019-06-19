@@ -1,8 +1,8 @@
 import Moment, { Moment as IMoment } from 'moment';
 
-import { DATE_FORMAT, TIME_FORMAT } from '@app/constants/fieldTypes';
+import { DATE_FORMAT, TIME_FORMAT } from '@app/renderer/constants/fieldTypes';
 
-import { IDateTimeTypeOptions } from '@app/modules/shared/types';
+import { IDateTimeTypeOptions } from '@app/renderer/modules/shared/types';
 
 const DATE_MOMENT_MAP = {
   [DATE_FORMAT.LOCAL]: 'M/D/YYYY',

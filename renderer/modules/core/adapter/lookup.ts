@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 
-import { FIELD_TYPES } from '@app/constants/fieldTypes';
+import { FIELD_TYPES } from '@app/renderer/constants/fieldTypes';
 import moment from 'moment';
 
 export const getLookupValue = (values: any[]) => {

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 import { getDataFromTree } from 'react-apollo';
 
-import { parseCookies } from '@app/utils';
+import { parseCookies } from '@app/renderer/utils';
 import initApollo from './initApollo';
 
 export default (App) =>

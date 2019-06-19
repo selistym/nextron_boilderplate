@@ -1,6 +1,6 @@
 import * as filestack from 'filestack-js';
 
-import { IAdaptedAttachment, IFile } from '@app/types';
+import { IAdaptedAttachment, IFile } from '@app/renderer/types';
 
 const client = filestack.init('AHQP20sDmRoqgUoG1ZP8gz');
 

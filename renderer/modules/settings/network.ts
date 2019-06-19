@@ -1,10 +1,10 @@
-import apollo from '@app/utils/api';
+import apollo from '@app/renderer/utils/api';
 
-import { GET_WORKSPACE_OPTIONS_AND_USERS_QUERY } from '@app/graphql/settings/getWorkspaceOptionsAndUsers.query';
+import { GET_WORKSPACE_OPTIONS_AND_USERS_QUERY } from '@app/renderer/graphql/settings/getWorkspaceOptionsAndUsers.query';
 import {
   GetWorkspaceOptionsAndUsersQuery,
   GetWorkspaceOptionsAndUsersQueryVariables,
-} from '@app/graphql/settings/types/GetWorkspaceOptionsAndUsersQuery';
+} from '@app/renderer/graphql/settings/types/GetWorkspaceOptionsAndUsersQuery';
 
 export const getWorkspacesAndUsers = async ({
   workspaceIdInput,

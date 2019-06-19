@@ -1,7 +1,7 @@
 import { get } from 'lodash';
 
-import { ICellProps } from '@app/components/Record';
-import { FIELD_TYPES } from '@app/constants/fieldTypes';
+import { ICellProps } from '@app/renderer/components/Record';
+import { FIELD_TYPES } from '@app/renderer/constants/fieldTypes';
 
 import { getFlattenedLookupValue, getLookupValue } from './lookup';
 

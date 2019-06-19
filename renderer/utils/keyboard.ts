@@ -1,4 +1,4 @@
-import { KEY_CODES } from '@app/constants/app';
+import { KEY_CODES } from '@app/renderer/constants/app';
 
 export const isNumberAllowKeyPress: { [key: string]: any } = {
   Backspace: 1,

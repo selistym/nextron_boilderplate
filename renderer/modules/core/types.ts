@@ -1,4 +1,4 @@
-import { ValueSource } from '@app/constants/grid';
+import { ValueSource } from '@app/renderer/constants/grid';
 
 export interface ICellContent {
   columnId: string;

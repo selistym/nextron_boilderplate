@@ -8,7 +8,7 @@ import { handleCoreCreated } from './handler';
 import { workspaceUpdatedSubscription } from '../shared/network';
 import { addCoreToWorkspace, getWorkspaceCores } from './network';
 
-import { compareTopics } from '@app/lib/subscriptionTopic';
+import { compareTopics } from '@app/renderer/lib/subscriptionTopic';
 
 export default createModel({
   state: {

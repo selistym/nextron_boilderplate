@@ -1,8 +1,8 @@
-import apollo from '@app/utils/api';
+import apollo from '@app/renderer/utils/api';
 
-import { WORKSPACE_UPDATED_SUBSCRIPTION } from '@app/graphql/workspace/workspaceUpdated.subscribe';
+import { WORKSPACE_UPDATED_SUBSCRIPTION } from '@app/renderer/graphql/workspace/workspaceUpdated.subscribe';
 
-import { WorkspaceSubscriptionInput } from '@app/types/graphql-global-types';
+import { WorkspaceSubscriptionInput } from '@app/renderer/types/graphql-global-types';
 
 export const workspaceUpdatedSubscription = (
   workspaceSubscriptionInput: WorkspaceSubscriptionInput,

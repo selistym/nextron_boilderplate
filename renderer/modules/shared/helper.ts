@@ -1,4 +1,4 @@
-import { compareTopics } from '@app/lib/subscriptionTopic';
+import { compareTopics } from '@app/renderer/lib/subscriptionTopic';
 import { get, uniq } from 'lodash';
 import { workspaceUpdatedSubscription } from './network';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { store } from '@app/modules/store';
-import { isServer } from '@app/utils/app';
+import { store } from '@app/renderer/modules/store';
+import { isServer } from '@app/renderer/utils/app';
 
 const __NEXT_REDUX_STORE__: string = '__NEXT_REDUX_STORE__';
 

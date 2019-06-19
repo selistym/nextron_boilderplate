@@ -1,9 +1,9 @@
 import Router from 'next/router';
 
-import { FIELD_TYPES } from '@app/constants/fieldTypes';
-import { LookupStatus, ValueSource } from '@app/constants/grid';
+import { FIELD_TYPES } from '@app/renderer/constants/fieldTypes';
+import { LookupStatus, ValueSource } from '@app/renderer/constants/grid';
 
-import { GetCoreQuery } from '@app/graphql/core/types/GetCoreQuery';
+import { GetCoreQuery } from '@app/renderer/graphql/core/types/GetCoreQuery';
 
 import { IAttachment } from '../shared/type';
 import { ICellContent } from './types';

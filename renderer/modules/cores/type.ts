@@ -2,7 +2,7 @@ import {
   AddCoreInput,
   WorkspaceIdInput,
   WorkspaceSubscriptionInput,
-} from '@app/types/graphql-global-types';
+} from '@app/renderer/types/graphql-global-types';
 
 export interface ICoresState {
   isLoading: boolean;

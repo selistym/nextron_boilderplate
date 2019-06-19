@@ -1,6 +1,6 @@
 import { differenceWith, isEqual } from 'lodash';
 
-import { getFormattedDateValue, getFormattedTimeValue } from '@app/utils/date';
+import { getFormattedDateValue, getFormattedTimeValue } from '@app/renderer/utils/date';
 
 export const adaptSummaryValue = (cell: any) => {
   const { type, value, typeOptions } = cell;

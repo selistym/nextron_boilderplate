@@ -25,7 +25,7 @@ if (isProd) {
   if (isProd) {
     mainWindow.loadURL('app://./home');
   } else {
-    const homeUrl = 'http://localhost:4000/home';
+    const homeUrl = 'http://localhost:4000/cores';
     mainWindow.loadURL(homeUrl);
     mainWindow.webContents.openDevTools();
   }

@@ -3,7 +3,7 @@ import { getByIdAndAllIds } from '../shared/helper';
 import {
   GetWorkspaceOptionsAndUsersQuery,
   GetWorkspaceOptionsAndUsersQuery_workspace,
-} from '@app/graphql/settings/types/GetWorkspaceOptionsAndUsersQuery';
+} from '@app/renderer/graphql/settings/types/GetWorkspaceOptionsAndUsersQuery';
 
 export const adaptGetWorkspaceOptionsAndUsers = ({
   workspace,

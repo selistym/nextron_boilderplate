@@ -1,4 +1,4 @@
-import { arrayToObject } from '@app/utils';
+import { arrayToObject } from '@app/renderer/utils';
 
 export const adaptExtractionRules = (rules) =>
   rules.map((rule) => ({

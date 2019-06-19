@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 
-import { TYPE_RENDERER, ValueSource } from '@app/constants/grid';
+import { TYPE_RENDERER, ValueSource } from '@app/renderer/constants/grid';
 import { configureColumns } from './adapter';
 import {
   convertPayloadIntoPresent,

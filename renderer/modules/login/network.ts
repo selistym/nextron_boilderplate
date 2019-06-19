@@ -1,8 +1,8 @@
-import apollo from '@app/utils/api';
+import apollo from '@app/renderer/utils/api';
 
-import { LOGIN_MUTATION } from '@app/graphql/auth/login.mutation';
+import { LOGIN_MUTATION } from '@app/renderer/graphql/auth/login.mutation';
 
-import { LoginMutation_login, LoginMutationVariables } from '@app/graphql/auth/types/LoginMutation';
+import { LoginMutation_login, LoginMutationVariables } from '@app/renderer/graphql/auth/types/LoginMutation';
 
 export const login = async ({
   email,

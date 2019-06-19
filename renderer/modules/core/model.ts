@@ -37,8 +37,8 @@ import {
   updateCellInCore,
 } from './network';
 
-import { TIME_OPTIONS } from '@app/constants/timeline';
-import { compareTopics } from '@app/lib/subscriptionTopic';
+import { TIME_OPTIONS } from '@app/renderer/constants/timeline';
+import { compareTopics } from '@app/renderer/lib/subscriptionTopic';
 
 const initialState = {
   /** Top level states & data */
