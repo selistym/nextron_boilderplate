@@ -2,10 +2,9 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "jsx": "react",
+    "jsx": "preserve",
     "lib": ["dom", "es2017"],
-    "experimentalDecorators": true,
-    "moduleResolution": "node",    
+    "moduleResolution": "node",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
@@ -14,9 +13,7 @@
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "noEmit": true,
   },
-  "include": ["./"],
   "exclude": [
     "app",
     "nextron",

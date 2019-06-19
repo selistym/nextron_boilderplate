@@ -46,7 +46,7 @@ async function dev() {
         child = npx('node', [args['--custom-server']], { cwd, stdio: 'inherit' });
       }
     } else {
-      child = npx('next', ['-p', '8888', 'renderer'], { cwd, stdio: 'inherit' });
+      child = npx('next', ['-p', '4000', 'renderer'], { cwd, stdio: 'inherit' });
     }
     child.on('close', () => {
       process.exit(0);
