@@ -20,10 +20,10 @@ class MyApp extends App {
         <Head>
           <title>ARK</title>
         </Head>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
+        {/* <ThemeProvider theme={theme}> */}
+          {/* <CssBaseline /> */}
           <Component {...pageProps} />
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </Container>
     );
   }

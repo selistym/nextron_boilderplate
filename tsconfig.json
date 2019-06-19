@@ -1,22 +1,26 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "jsx": "preserve",
-    "lib": ["dom", "es2017"],
-    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["*"]
+    },
+    "experimentalDecorators": true,
     "allowJs": true,
+    "jsx": "react",
+    "target": "esnext",
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
+    "lib": ["dom", "es2017"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "removeComments": false,
     "preserveConstEnums": true,
+    "removeComments": false,
+    "skipLibCheck": true,
     "sourceMap": true,
+    "strict": true
   },
-  "exclude": [
-    "app",
-    "nextron",
-    "renderer/next.config.js",
-  ],
+  "include": ["./"],
+  "exclude": ["./node_modules"]
 }
