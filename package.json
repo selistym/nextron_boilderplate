@@ -20,8 +20,8 @@
     "build": "node nextron/nextron.js build"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.3.4",
-    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",    
     "@material-ui/core": "^4.1.1",
     "@material-ui/styles": "^4.1.1",
     "@rematch/core": "^1.1.0",
@@ -37,7 +37,7 @@
     "apollo-link-context": "^1.0.15",
     "apollo-link-state": "^0.4.2",
     "apollo-link-ws": "^1.0.17",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.0.6",    
     "cookie": "^0.3.1",
     "cross-spawn": "^6.0.5",
     "dom-helpers": "^3.4.0",
@@ -85,7 +85,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.3.3",
     "@types/apollo-upload-client": "^8.1.1",
     "@types/cookie": "^0.3.2",
     "@types/graphql": "^14.0.7",
